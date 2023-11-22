@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SRPG</title>
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <link href="/sdcss.css" rel="stylesheet" type="text/css" media="all">
+        <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    </head>
+    <body>
+        <div class="row">
+            <div class="col">
+                <h1>
+                    TITLE
+                </h1>
+                <p>
+                A generic role playing game engine
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col w3">
+                <details open>
+                    <summary>
+                        Requirements
+                    </summary>
+                    <p>
+                    5 six-sided dice. Exactly 1 of these dice must be distinguishable from the rest - this die is you base die. 4 black and 1 white is perfect.
+                    </p>
+                </details>
+                <details open>
+                    <summary>
+                        Checks
+                    </summary>
+                    <p>
+                    When a player character want to achieve any non-trivial action the following happens: 
+                    First, the game master chooses a difficulty of 4, 5 or 6 (4 being easy, 5 being the default and 6 being hard). 
+                    Then, the player makes a check against the difficulty, based on the most relevant talent.
+                    </p>
+
+                    <p>
+                    To make a check, the player roll as many dice as the used talent's level - one of these dice must be the base die.
+                    </p>
+
+                    <p>
+                    If <strong>any</strong> of the rolled dice has a value of at least as much as the difficulty, the check was a success. Otherwise it was a failure.
+                    If the base die shows a 1, the check is deemed critical. Depending on the overall outcome, this might be very positive or horribly bad.
+                    </p>
+                </details>
+            </div>
+            <div class="col w3">
+                <details open>
+                    <summary>
+                        Talents
+                    </summary>
+                    <p>
+                    Talents describe the expertise of player characters. Low values being bad, high values being good.
+                    When you encounter an action that cannot be represented by any existing talent, make up a new talent that fits and assign it to the player character. - To do so, roll a d6, add modifier and assign the resulting level to the talent: 
+                    </p>
+                    <table style="width:100%;">
+                        <tr>
+                            <td>
+                                <strong>
+                                    Result
+                                </strong>
+                            </td>
+                            <td>
+                                <strong>
+                                    Level
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <4
+                            </td>
+                                <td>
+                                    1
+                                </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                4-5
+                            </td>
+                            <td>
+                                2
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                6
+                            </td>
+                            <td>
+                                3
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                >6
+                            </td>
+                            <td>
+                                4
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="example">
+                        A player character picks up an axe. We do not know how well this character uses an axe, so we make up a new talent for them; Axes. As the character is a warrior, they gain +1 to melee weapon talent assignments. They roll a 4 which equates to 5 with the +1 modifier, thus - by referring the table above - the character now has the talent Axes 2.
+                        If a wizard picked up the same axe (or any other melee weapon), they would need to make a talent assignment using a -1 modifier, thus rolling a 4 would give them Axes 1.
+                    </div>
+                    <p>
+                    Talents persist even if a related item should leave a player character's inventory. 
+                    </p>
+                    <p>
+                    Talents vary greatly in theme and specificity. They represent the use of weapon types, the strength to hold a door, health to withstand poison. Everything that a player character does is expressed using talents. Here's a list of potential talents: Resist poison, Swords, Climbing, Dodging, Barter, Threaten, Throw, Shoot, Unarmed Combat, Fireball, X-Ray Vision, Hide, Sneak, Lockpicking, Lie, Invent, Read, etc.
+                    </p>
+                </details>
+            </div>
+            <div class="col w3">
+                <details open>
+                    <summary>
+                        Leveling
+                    </summary>
+                    <p>
+                    When the game master deems it so (usually after a gruelling encounter) the player characters can try to upgrade a talent.
+                    To do so, they make another talent assignment roll (see Talents). If the result is higher than the current level of the talent, they increase the talent level by 1.
+                    Alternatively, they can choose to increase their health by 1 without any check.
+                    </p>
+                </details>
+            </div>
+            <div class="col w3">
+                <details open>
+                    <summary>
+                        Powers
+                    </summary>
+                    <p>
+                    Powers represent all supernatural abilities in the game world. In a fantasy setting this would be magic, in a cyberpunk setting it could mean implants allowing super speed, retractable wristblades etc.
+                    Just like weapons and other tools, player characters make a talent assignment for each newly acquired power.
+                    </p>
+                    <div class="example">
+                        A wizard finds a new scroll: Fireball. They have not seen this spell before so they make a talent assignment. Since they are a wizard, they gain a +2 modifier for power talent assignments.
+                        The player rolls a 3, resulting in a total of 5 which in turn translates to the value of 2. Thus, they now have a new talent: Fireball 2.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </body>
+</html>
