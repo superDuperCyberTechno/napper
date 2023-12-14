@@ -1,275 +1,319 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SRPG</title>
-        <link rel="preconnect" href="https://rsms.me/">
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-        <link href="/sdcss.css" rel="stylesheet" type="text/css" media="all">
-        <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-    </head>
-    <body>
-        <div class="row">
-            <div class="col">
-                <h1>
-                    Napper
-                </h1>
-                <p>
-                    A generic role playing game engine
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col w3">
-                <details open>
-                    <summary class="h2">
-                        Requirements
-                    </summary>
-                    <h3>Mandatory</h3>
-                    <p>
-                        6 six-sided dice. Exactly 1 of these dice must be distinguishable from the rest - this die is you base die. 5 black and 1 white is perfect. You also need pens and paper to document your player characters.
-                    </p>
-                    <h3>Optional</h3>
-                    <p>
-                        1d3, 1d4 and 1d5.
-                    </p>
-                </details>
-                <details open>
-                    <summary class="h2">
-                        Checks
-                    </summary>
-                    <p>
-                        When a player character want to achieve any non-trivial action the following happens: 
-                    </p>
 
-                    <ol>
-                        <li>
-                            The game master chooses a difficulty (see table below).
-                        </li>
-                        <li>
-                            The player makes a check against the difficulty, based on the most relevant talent.
-                        </li>
-                    </ol>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SRPG</title>
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link href="/sdcss.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+</head>
 
-                    <table>
-                        <tr>
-                            <td>Difficulty</td>
-                            <td>Value</td>
-                        </tr>
-                        <tr>
-                            <td>Easy</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>Default</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>Hard</td>
-                            <td>6</td>
-                        </tr>
-                    </table>
+<body>
+  <div class="row">
+    <div class="col">
+      <h1>
+        Napper
+      </h1>
+      <p>
+        A generic role playing game engine
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col w4">
+      <details open>
+        <summary class="h2">
+          Requirements
+        </summary>
+        <p>
+          6d6 (6 six-sided dice). Exactly 1 of these dice must be distinguishable from the rest - this die is you base
+          die. 5 black and 1 white is perfect. You also need pens and paper to document your player characters.
+        </p>
+      </details>
+      <details open>
+        <summary class="h2">
+          Checks
+        </summary>
+        <p>
+          When a player character want to achieve any non-trivial action the following happens:
+        </p>
 
-                    <p>
-                        To make a check, the player roll as many dice as the used talent's level - one of these dice must be the base die.
-                    </p>
+        <ol>
+          <li>
+            The game master chooses a difficulty (see table below).
+          </li>
+          <li>
+            The player makes a check against the difficulty, based on the most relevant talent.
+          </li>
+        </ol>
 
-                    <p>
-                        There's only 2 things to note after rolling a check:
-                    </p>
-                    <ol>
-                        <li>
-                            If <strong>any</strong> of the rolled dice has a value of <strong>at least as much as the difficulty</strong>, the check was a <strong>success</strong>. Otherwise it was a failure.
-                        </li>
-                        <li>
-                            If the <strong>base die shows 1</strong>, the check is deemed <strong>critical</strong>. Depending on the overall outcome (see previous bullet point), this might be very positive or horribly bad.
-                        </li>
-                    </ol>
+        <table>
+          <tr>
+            <td>Difficulty</td>
+            <td>Value</td>
+          </tr>
+          <tr>
+            <td>Very easy</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>Easy</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>Default/normal</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>Hard</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>Very hard</td>
+            <td>13</td>
+          </tr>
+        </table>
 
-                    <p class="example">
-                        A player character wants to climb a house. The game master does not have any inclination to decide on the difficulty, so the default (5) is chosen. The player character uses the talent Climb 2 to achieve the action, rolling 2d6 (base die and a d6): Base die shows a 3 and the other die is a 6. Thus - because of the 6 - the attempt was a success.
-                        Had the base die shown a 1, the action would have been deemed critical and because the overall outcome was a success the player character would've climbed the wall with overwhelming success. In this case, the player character is awarded 1 Luck as there's no amazing extra benefits to gather from the critically successful action.
-                    </p>
-                </details>
-                <details open>
-                    <summary class="h2">
-                        Criticals
-                    </summary>
-                    <p>
-                    </p>
-                </details>
-            </div>
-            <div class="col w3">
-                <details open>
-                    <summary class="h2">
-                        Talents
-                    </summary>
-                    <p>
-                        Talents describe the expertise of player characters. Low values being bad, high values being good.
-                        When you encounter an action that cannot be represented by any existing talent, make up a new talent that fits and assign it to the player character. - To do so, note your character class' affinity to the talent and roll the resulting die.
-                    </p>
-                    <table>
-                        <tr>
-                            <td>Affinity</td>
-                            <td>Assignment die</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Inferior
-                            </td>
-                            <td>
-                                d3 or d6 (reroll on 4, 5 or 6)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Default
-                            </td>
-                            <td>
-                                d4 or d6 (reroll on 5 or 6)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Superior
-                            </td>
-                            <td>
-                                d5 or d6 (reroll on 6)
-                            </td>
-                        </tr>
-                    </table>
-                    <p class="example">
-                        A player character picks up an axe. We do not know how well this character uses an axe, so we make up a new talent for them; Axes. 
-                        The character is a warrior, thus they have superior affinity for melee weapons. They roll a 4, thus the character now has a new talent: Axes 4.
-                        If a wizard picked up the same axe (or any other melee weapon), the outcome would never exceed 3 because of their inferior affinity for all weapons.
-                    </p>
-                    <p>
-                        Talents (and their level) persist even if a related item should leave a player character's inventory. 
-                    </p>
-                    <p>
-                        Talents vary greatly in theme and specificity. They represent the use of weapon types, the strength to hold a door, health to withstand poison. Pretty much everything that a player character does or uses is expressed using talents: Resist poison, Swords, Climbing, Dodging, Barter, Threaten, Throw, Pistols, Unarmed Combat, Fireball, X-Ray Vision, Hide, Sneak, Lockpicking, Lie, Invent, Read, etc.
-                    </p>
-                </details>
-            </div>
-            <div class="col w3">
-                <details open>
-                    <summary class="h2">
-                        Advancement
-                    </summary>
-                    <p>
-                        When the game master deems it so (usually after a gruelling encounter) the player characters can try to upgrade a talent they have used.
-                        To do so, they make another talent assignment roll (see Talents). If the result is higher than the current level of the talent, they increase the talent level by 1.
-                        Alternatively, they can choose to increase their health by 1 without any check.
-                    </p>
-                </details>
-                <details open>
-                    <summary class="h2">
-                        Combat
-                    </summary>
-                    <p>
-                        Combat is player-facing, meaning that players will make all dice rolls. Prior to combat, players declares what they equip
-                    </p>
-                </details>
-                <details open>
-                    <summary class="h2">
-                        Armor
-                    </summary>
-                    <p>
-                        Body armor counts as 1 huge item and has health of its own. All damage sustained while wearing armor is transferred directly to the armor. Shields work the same way but must be wielded to have any effect. However, unlike body armor, damage sustained is optional. Some damage explicitely ignore armor and damages the player character health directly.
-                    </p>
-                </details>
-                <details open>
-                    <summary class="h2">
-                        Reactions
-                    </summary>
-                    <p>
-                        When the game master is uncertain how a non-player character is going to react, they can make a reaction roll using 1d6 (higher values being better for the players):
-                    </p>
-                    <table>
-                        <tr>
-                            <td>
-                                Roll
-                            </td>
-                            <td>
-                                Reaction
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Extreme animosity, will attack</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Angered, very suspicious</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Dismissive, prefer to be left alone</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Interested, wants more information</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Friendly, will help without much incentive</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Elated, will do a lot and ask few questions</td>
-                        </tr>
-                    </table>
-                    <p>
-                        Sometimes a slight modifier can be added to a reaction roll (+1, +2, -1 or -2). Positive modifiers will yield better results for players, negative modifiers will do the opposite.
-                    </p>
-                </details>
-            </div>
-            <div class="col w3">
-                <details open>
-                    <summary class="h2">
-                        Powers
-                    </summary>
-                    <p>
-                        Powers represent all supernatural abilities in the game world. In a fantasy setting this would be magic, in a cyberpunk setting it could mean implants allowing super speed, retractable wristblades etc.
-                        Just like weapons and other tools, player characters make a talent assignment for each newly acquired power.
-                    </p>
-                    <p>
-                        Powers are tied to discrete, destructible objects; magic spells is written on scrolls, hacking modules are hardcoded into circuit boards, the void bridge is tied to a mystical totem etc.
-                    </p>
-                </details>
-                <details open>
-                    <summary class="h2">
-                        Inventory
-                    </summary>
-                    <p>
-                        Player characters can carry <strong>10 items</strong>. Of these items, characters can carry <strong>1 huge item</strong>. Player characters can carry <strong>infinite tiny items</strong>.
-                    </p>
-                </details>
-                <details open>
-                    <summary class="h2">
-                        Luck
-                    </summary>
-                    <p>
-                        Sometimes, someone has to draw the shortest straw. Who will the hulking beast attack first? Who will get hit in the head with the falling potted plant? Who will step in the bear trap? Who will literally draw the shortest straw? For this, use <i>Luck</i>.
-                    </p>
-                    <p>
-                        All player characters start with d6 Luck. If anything unfortunate happens that is not explicitely tied to a specific character, the player characters make a luck roll: d6 + luck (reroll on ties). The unfortunate event is inflicted upon the player character with the lowest result who in turn is awarded 1 Luck.
-                    </p>
-                    <h3>Meta currency</h3>
-                    <p>
-                        Luck is also a meta currency that can be used by players to enhance their chance of success: Player characters can add 1 additional die (only 1) to any check by deducting 1 luck from their luck pool.
-                    </p>
+        <p>
+          To make a check, the player rolls 1d20 and add their talent modifier. If the result is at least as high as the
+          difficulty, the action was a success.
+        </p>
+      </details>
+      <details open>
+        <summary class="h2">
+          Criticals
+        </summary>
+        To determine if a critical event has happened, refer to the below list, ordered from highest, - to lowest priority:
+        <ol>
+            <li>
+                Any check that results in a value of <strong>1 <u>before</u> applying modifier</strong> is a <strong>critical failure</strong>.
+            </li>
+            <li>
+                Any check that results in a value of <strong>20 <u>before</u> applying modifier</strong> is a <strong>critical success</strong>.
+            </li>
+            <li>
+                Any check that results in a value of <strong>1 or less <u>after</u> applying modifier</strong> is a <strong>critical failure</strong>.
+            </li>
+            <li>
+                Any check that results in a value of <strong>20 or more <u>after</u> applying modifier</strong> is a <strong>critical success</strong>.
+            </li>
+        </ol>
+      </details>
+      <details open>
+        <summary class="h2">
+          Powers
+        </summary>
+        <p>
+          Powers represent all supernatural abilities in the game world. In a fantasy setting this would be magic, in a
+          cyberpunk setting it could mean implants allowing super speed, retractable wristblades etc.
+          Just like weapons and other tools, player characters make a talent assignment for each newly acquired power.
+        </p>
+        <p>
+          Powers are tied to discrete, destructible objects; magic spells is written on scrolls, hacking modules are
+          hardcoded into circuit boards, the void bridge is tied to a mystical totem etc.
+        </p>
+      </details>
+    </div>
+    <div class="col w4">
+      <details open>
+        <summary class="h2">
+          Talents
+        </summary>
+        <p>
+          Talents describe the expertise of player characters. Low values being bad, high values being good.
+          When you encounter an action that cannot be represented by any existing talent, make up a new talent that fits
+          and assign it to the player character. - To do so, note your character class' affinity to the talent and make a talent assignment roll:
+        </p>
+        <table>
+            <tr>
+                <td>Roll</td>
+                <td>Inferior</td>
+                <td>Default</td>
+                <td>Superior</td>
+            </tr>
+            <tr>
+                <td>1-2</td>
+                <td>-5</td>
+                <td>-3</td>
+                <td>-1</td>
+            </tr>
+            <tr>
+                <td>3-5</td>
+                <td>-4</td>
+                <td>-2</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>6-8</td>
+                <td>-3</td>
+                <td>-1</td>
+                <td>+1</td>
+            </tr>
+            <tr>
+                <td>9-12</td>
+                <td>-2</td>
+                <td>0</td>
+                <td>+2</td>
+            </tr>
+            <tr>
+                <td>13-15</td>
+                <td>-1</td>
+                <td>+1</td>
+                <td>+3</td>
+            </tr>
+            <tr>
+                <td>16-18</td>
+                <td>0</td>
+                <td>+2</td>
+                <td>+4</td>
+            </tr>
+            <tr>
+                <td>19-20</td>
+                <td>+1</td>
+                <td>+3</td>
+                <td>+5</td>
+            </tr>
+        </table>
+        <p>
+          Talents (and their level) persist even if a related item should leave a player character's inventory.
+        </p>
+        <p>
+          Talents vary greatly in theme and specificity. They represent the use of weapon types, the strength to hold a
+          door, health to withstand poison. Pretty much everything that a player character does or uses is expressed
+          using talents: Resist poison, Swords, Climbing, Dodging, Barter, Threaten, Throw, Pistols, Unarmed Combat,
+          Fireball, X-Ray Vision, Hide, Sneak, Lockpicking, Lie, Invent, Read, etc.
+        </p>
+      </details>
+      <details open>
+        <summary class="h2">
+          Luck
+        </summary>
+        <p>
+          Sometimes, someone has to draw the shortest straw. Who will the hulking beast attack first? Who will get hit
+          in the head with the falling potted plant? Who will step in the bear trap? Who will literally draw the
+          shortest straw? For this, use <i>Luck</i>.
+        </p>
+        <p>
+          All player characters start with d6 Luck. If anything unfortunate happens that is not explicitely tied to a
+          specific character, the player characters make a luck roll: 1d20 + luck (reroll on ties). The unfortunate
+          event
+          is inflicted upon the player character with the lowest result who in turn is awarded 1 Luck.
+        </p>
 
-                    <h3>Critical success award</h3>
-                    <p>
-                        It also acts as a way for game masters to award players characters with 1 Luck if they roll a critical success with no obvious extra benefits to apply.
-                    </p>
-                    <p>
-                        Luck has no ceiling.
-                    </p>
-                </details>
-            </div>
-        </div>
-    </body>
+        <h3>Meta currency</h3>
+        <p>
+          Luck is also a meta currency that can be used by players to enhance their chance of success for checks: 1 luck expened will equal to +1 to their modifier. Expended luck must be resolved prior to rolling.
+        </p>
+        <p>
+            In addition to talent checks, Luck can also be used in this way to increase the result of talent assignment rolls.
+        </p>
+
+        <h3>Critical success award</h3>
+        <p>
+          It also acts as a way for game masters to award players characters with 1 Luck if they roll a critical success
+          with no obvious extra benefits to apply.
+        </p>
+      </details>
+    </div>
+    <div class="col w4">
+      <details open>
+        <summary class="h2">
+          Advancement
+        </summary>
+        <p>
+          When the game master deems it so (usually after a gruelling encounter) the player characters can try to
+          upgrade a talent they have used.
+          To do so, they make another talent assignment roll (see Talents). If the result is higher than the current
+          level of the talent, they increase the talent level by 1.
+          Alternatively, they can choose to increase their health by 1 without any check.
+        </p>
+      </details>
+      <details open>
+        <summary class="h2">
+          Combat
+        </summary>
+        <p>
+          Combat is player-facing, meaning that players will make all dice rolls. Prior to combat, players declares what
+          they equip
+        </p>
+      </details>
+      <details open>
+        <summary class="h2">
+          Armor
+        </summary>
+        <p>
+          Body armor has health of its own. All damage sustained while wearing armor is transferred directly to the
+          armor.
+        </p>
+        <p>
+          Shields work the same way but must be wielded to have any effect (this takes up one hand). However, unlike
+          body armor, damage sustained is optional.
+        </p>
+        <p>
+          Some damage explicitely ignore armor and damages the player character health directly.
+        </p>
+      </details>
+      <details open>
+        <summary class="h2">
+          Reactions
+        </summary>
+        <p>
+          When the game master is uncertain how a non-player character is going to react, they can make a reaction roll
+          using 1d6 (higher values being better for the players):
+        </p>
+        <table>
+          <tr>
+            <td>
+              Roll
+            </td>
+            <td>
+              Reaction
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Extreme animosity, will attack</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Angered, very suspicious</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dismissive, prefer to be left alone</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Interested, wants more information</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Friendly, will help without much incentive</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Elated, will do a lot and ask few questions</td>
+          </tr>
+        </table>
+        <p>
+          Sometimes a slight modifier can be added to a reaction roll (+1, +2, -1 or -2). Positive modifiers will yield
+          better results for players, negative modifiers will do the opposite.
+        </p>
+      </details>
+      <details open>
+        <summary class="h2">
+          Inventory
+        </summary>
+        <p>
+          Player characters can carry <strong>10 items</strong>. Of these items, characters can carry <strong>1 huge
+            item</strong>. Player characters can carry <strong>infinite tiny items</strong>.
+        </p>
+      </details>
+    </div>
+  </div>
+</body>
+
 </html>
