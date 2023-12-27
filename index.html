@@ -76,7 +76,7 @@
             <td>12</td>
           </tr>
           <tr>
-            <td>Harderjk</td>
+            <td>Harder</td>
             <td>13</td>
           </tr>
         </table>
@@ -93,10 +93,14 @@
         To determine if a critical event has happened, refer to the below list, ordered from highest, - to lowest priority:
         <ol>
             <li>
-                Any check that results in a value of <strong>1 or 20 <u>before</u> applying modifier</strong> is a <strong>critical failure</strong>.
+                Any check that results in a value of <strong>1 <u>before</u> applying modifier</strong> is a <strong>critical failure</strong>.
+                <br>
+                Any check that results in a value of <strong>20 <u>before</u> applying modifier</strong> is a <strong>critical success</strong>.
             </li>
             <li>
-                Any check that results in a value of <strong>less than 1 or more than 20<u>after</u> applying modifier</strong> is a <strong>critical failure</strong>.
+                Any check that results in a value of <strong>less than 1 <u>after</u> applying modifier</strong> is a <strong>critical failure</strong>.
+                <br>
+                Any check that results in a value of <strong>more than 20 <u>after</u> applying modifier</strong> is a <strong>critical success</strong>.
             </li>
         </ol>
       </details>
