@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SRPG</title>
+  <title>Napper</title>
   <link rel="preconnect" href="https://rsms.me/">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <link href="/sdcss.css" rel="stylesheet" type="text/css" media="all">
@@ -60,7 +60,7 @@
             <td>Value</td>
           </tr>
           <tr>
-            <td>Very easy</td>
+            <td>Easier</td>
             <td>9</td>
           </tr>
           <tr>
@@ -76,7 +76,7 @@
             <td>12</td>
           </tr>
           <tr>
-            <td>Very hard</td>
+            <td>Harderjk</td>
             <td>13</td>
           </tr>
         </table>
@@ -93,16 +93,10 @@
         To determine if a critical event has happened, refer to the below list, ordered from highest, - to lowest priority:
         <ol>
             <li>
-                Any check that results in a value of <strong>1 <u>before</u> applying modifier</strong> is a <strong>critical failure</strong>.
+                Any check that results in a value of <strong>1 or 20 <u>before</u> applying modifier</strong> is a <strong>critical failure</strong>.
             </li>
             <li>
-                Any check that results in a value of <strong>20 <u>before</u> applying modifier</strong> is a <strong>critical success</strong>.
-            </li>
-            <li>
-                Any check that results in a value of <strong>less than 1 <u>after</u> applying modifier</strong> is a <strong>critical failure</strong>.
-            </li>
-            <li>
-                Any check that results in a value of <strong>more than 20 <u>after</u> applying modifier</strong> is a <strong>critical success</strong>.
+                Any check that results in a value of <strong>less than 1 or more than 20<u>after</u> applying modifier</strong> is a <strong>critical failure</strong>.
             </li>
         </ol>
       </details>
@@ -229,10 +223,16 @@
         </summary>
         <p>
           When the game master deems it so (usually after a gruelling encounter) the player characters can try to
-          upgrade a talent they have used.
-          To do so, they make another talent assignment roll (see Talents). If the result is higher than the current
+          upgrade their character: Increase talent level or increase maximum health.
           level of the talent, they increase the talent level by 1.
-          Alternatively, they can choose to increase their health by 1 without any check.
+        </p>
+        <h3>Talent level</h3>
+        <p>
+            Player choose a talent they like to get better at and make another talent assignment roll for it (see Talents). If the result is higher than the current talent level, increase it by 1.
+        </p>
+        <h3>Maximum health</h3>
+        <p>
+            Player roll 1d20, if the result is higher than their current maximum health, they increase it by 1.
         </p>
       </details>
       <details open>
@@ -249,12 +249,11 @@
           Armor
         </summary>
         <p>
-          Body armor has health of its own. All damage sustained while wearing armor is transferred directly to the
-          armor.
+            Armor are described using a single die that represent its ability to mitigate damage, just like weapons have a die that represent its damage output.
+            Whenever damage is sustained, roll the armor die and subtract the result from the incoming damage. Subtract the result from player character health.
         </p>
         <p>
-          Shields work the same way but must be wielded to have any effect (this takes up one hand). However, unlike
-          body armor, damage sustained is optional.
+            Any incoming damage can never go lower than one regardless of the armor worn.
         </p>
         <p>
           Some damage explicitely ignore armor and damages the player character health directly.
