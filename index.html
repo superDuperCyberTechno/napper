@@ -46,15 +46,17 @@
                         <strong>d-notation</strong> (1d6, 2d4, 1d8 etc.): Used for sums (shorthand for "1 die, 6 sides", "2 dice, 4 sides", "1 die, 8 sides" etc.)
                         <br>
                         Roll the amount of dice that correspond to the number <u>before</u> <i>d</i>. The size (number of sides) of the dice is determined by the number <u>after</u> <i>d</i>.
-                        <br>
-                        Example: An unfortunate explosion does 2d4 damage. Roll 2 four-sided dice and add all the results to get the damage the explosion did.
+                        <p class="example">
+                            An unfortunate explosion does 2d4 damage. Roll 2 four-sided dice and add all the results to get the damage the explosion did.
+                        </p>
                     </p>
                     <p>
                         <strong>i-notation</strong> (1i4, 3i8, 4i20 etc.): Used for probabilites (shorthand for "1 in 4", "3 in 8", "4 in 20" etc.)
                         <br>
                         Roll one die, its size (number of sides) is determined by the number <u>after</u> <i>i</i>. If the result is not higher than the number before <i>i</i>, the result is true. Otherwise it is false.
-                        <br>
-                        Example: A barrel of volatile explosives has a probability of 3i8 to explode. Roll one eight-sided die (1d8), if the result is 1, 2 or 3 the result is true (the barrel explodes). Otherwise the outcome is false (the barrel does not explode).
+                    </p>
+                    <p class="example">
+                        A barrel of volatile explosives has a probability of 3i8 to explode. Roll one eight-sided die (1d8), if the result is 1, 2 or 3 the result is true (the barrel explodes). Otherwise the outcome is false (the barrel does not explode).
                     </p>
 
                     <h3>Expansions</h3>
@@ -378,28 +380,30 @@
                 </details>
                 <details open>
                     <summary class="h2">
-                        Luck
+                        Favor
                     </summary>
                     <p>
-                        All player characters start with d6 Luck. If anything unfortunate happens that is not explicitly tied to a
-                        specific character, the player characters make a luck roll: 1d20 + luck (reroll on ties). The unfortunate
-                        event
-                        is inflicted upon the player character with the lowest result who in turn is awarded 1 Luck.
+                        All player characters start with d6 Favor. If anything unfortunate happens that is not explicitly tied to a specific character, the player characters make a Favor roll: 1d20 + Favor (reroll on ties). The unfortunate event is inflicted upon the player character with the lowest result who in turn is awarded 1 Favor.
+                    </p>
+                    <p>
+                        If no obvious boon can be applied to a critical success, players are awarded 1 Favor.
                     </p>
 
-                    <h3>Meta currency</h3>
+                    <h3>Upgrading talents</h3>
                     <p>
-                        Luck is also a meta currency that can be used by players to enhance their chance of success for checks: 1 luck expended will equal to +1 to their modifier. Expended luck must be resolved prior to rolling.
-                    </p>
-                    <p>
-                        In addition to talent checks, Luck can also be used in this way to increase the result of talent assignment rolls.
+                        Expending 5 Favor allows players to choose a talent they like to get better at and make another talent assignment roll for it (see Talents). If the result is higher than the current talent level, increase it by 1.
                     </p>
 
-                    <h3>Critical success award</h3>
+                    <h3>Increasing health</h3>
                     <p>
-                        It also acts as a way for game masters to award players characters with 1 Luck if they roll a critical success
-                        with no obvious extra benefits to apply.
+                        Expending 5 favor allows players to roll 1d20, if the result is higher than their current maximum health, they increase it by 1.
                     </p>
+
+                    <h3>Boosting rolls</h3>
+                    <p>
+                        Favor can be used by players to enhance their chance of success when using a d20: 1 Favor expended will equal to +1 to their modifier. Expended Favor must be resolved prior to rolling.
+                    </p>
+
                 </details>
                 <details open>
                     <summary class="h2">
@@ -428,24 +432,6 @@
                 </details>
             </div>
             <div class="col w4">
-                <details open>
-                    <summary class="h2">
-                        Advancement
-                    </summary>
-                    <p>
-                        When the game master deems it so (usually after a gruelling encounter) the player characters can try to
-                        upgrade their character: Increase talent level or increase maximum health.
-                        level of the talent, they increase the talent level by 1.
-                    </p>
-                    <h3>Talent level</h3>
-                    <p>
-                        Player choose a talent they like to get better at and make another talent assignment roll for it (see Talents). If the result is higher than the current talent level, increase it by 1.
-                    </p>
-                    <h3>Maximum health</h3>
-                    <p>
-                        Player roll 1d20, if the result is higher than their current maximum health, they increase it by 1.
-                    </p>
-                </details>
                 <details open>
                     <summary class="h2">
                         Combat
