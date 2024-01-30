@@ -1,563 +1,563 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Napper</title>
-  <link rel="preconnect" href="https://rsms.me/">
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link href="https://superdupercybertechno.github.io/sdcss/sdcss.css" rel="stylesheet" type="text/css" media="all">
-  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Napper</title>
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <link href="https://superdupercybertechno.github.io/sdcss/sdcss.css" rel="stylesheet" type="text/css" media="all">
+        <link href="/napper/style.css" rel="stylesheet" type="text/css" media="all">
+    </head>
 
-<body>
-  <div class="row">
-    <div class="col">
-      <h1>
-        Napper
-        <sup>0.9</sup>
-      </h1>
-      <p>
-        A generic role playing game engine
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col w4">
-      <details open>
-        <summary class="h2">
-            Introduction
-        </summary>
-        <p>
-            Napper is a streamlined, theme-agnostic, d20-based, roll-over, tabletop role-playing game system. In only consists of rules in its rawest form, for specific information on monsters, items, classes etc. refer to an expansion.
-        </p>
+    <body>
+        <div class="row">
+            <div class="col">
+                <h1>
+                    Napper
+                    <sup>0.9</sup>
+                </h1>
+                <p>
+                    A generic role playing game engine
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col w4">
+                <details open>
+                    <summary class="h2">
+                        Introduction
+                    </summary>
+                    <p>
+                        Napper is a streamlined, theme-agnostic, d20-based, roll-over, tabletop role-playing game system. In only consists of rules in its rawest form, for specific information on monsters, items, classes etc. refer to an expansion.
+                    </p>
 
-        <h3>Requirements</h3>
-        <p>
-            A set of 7 standard polyhedral dice: 1d4, 1d6, 1d8, 1d10, 1d12 and 1d20 (d100 is not needed). Pen and paper. That's it.
-        </p>
+                    <h3>Requirements</h3>
+                    <p>
+                        A set of 7 standard polyhedral dice: 1d4, 1d6, 1d8, 1d10, 1d12 and 1d20 (d100 is not needed). Pen and paper. That's it.
+                    </p>
 
-        <h3>Nomenclature</h3>
-        <p>
-            When playing Napper, you will frequently be asked to roll dice. There are 2 ways to 
-        </p>
-        <p>
-            <strong>d-notation</strong> (1d6, 2d4, 1d8 etc.): Used for sums (shorthand for "1 die, 6 sides", "2 dice, 4 sides", "1 die, 8 sides" etc.)
-            <br>
-            Roll the amount of dice that correspond to the number <u>before</u> <i>d</i>. The size (number of sides) of the dice is determined by the number <u>after</u> <i>d</i>.
-            <br>
-            Example: An unfortunate explosion does 2d4 damage. Roll 2 four-sided dice and add all the results to get the damage the explosion did.
-        </p>
-        <p>
-            <strong>i-notation</strong> (1i4, 3i8, 4i20 etc.): Used for probabilites (shorthand for "1 in 4", "3 in 8", "4 in 20" etc.)
-            <br>
-            Roll one die, its size (number of sides) is determined by the number <u>after</u> <i>i</i>. If the result is not higher than the number before <i>i</i>, the result is true. Otherwise it is false.
-            <br>
-            Example: A barrel of volatile explosives has a probability of 3i8 to explode. Roll one eight-sided die (1d8), if the result is 1, 2 or 3 the result is true (the barrel explodes). Otherwise the outcome is false (the barrel does not explode).
-        </p>
-      </details>
-      <details open>
-        <summary class="h2">
-          Checks
-        </summary>
-        <p>
-          When a player character want to achieve any non-trivial action the following happens:
-        </p>
+                    <h3>Nomenclature</h3>
+                    <p>
+                        When playing Napper, you will frequently be asked to roll dice. There are 2 ways to 
+                    </p>
+                    <p>
+                        <strong>d-notation</strong> (1d6, 2d4, 1d8 etc.): Used for sums (shorthand for "1 die, 6 sides", "2 dice, 4 sides", "1 die, 8 sides" etc.)
+                        <br>
+                        Roll the amount of dice that correspond to the number <u>before</u> <i>d</i>. The size (number of sides) of the dice is determined by the number <u>after</u> <i>d</i>.
+                        <br>
+                        Example: An unfortunate explosion does 2d4 damage. Roll 2 four-sided dice and add all the results to get the damage the explosion did.
+                    </p>
+                    <p>
+                        <strong>i-notation</strong> (1i4, 3i8, 4i20 etc.): Used for probabilites (shorthand for "1 in 4", "3 in 8", "4 in 20" etc.)
+                        <br>
+                        Roll one die, its size (number of sides) is determined by the number <u>after</u> <i>i</i>. If the result is not higher than the number before <i>i</i>, the result is true. Otherwise it is false.
+                        <br>
+                        Example: A barrel of volatile explosives has a probability of 3i8 to explode. Roll one eight-sided die (1d8), if the result is 1, 2 or 3 the result is true (the barrel explodes). Otherwise the outcome is false (the barrel does not explode).
+                    </p>
+                </details>
+                <details open>
+                    <summary class="h2">
+                        Checks
+                    </summary>
+                    <p>
+                        When a player character want to achieve any non-trivial action the following happens:
+                    </p>
 
-        <ol>
-          <li>
-            The game master chooses a difficulty (see table below).
-          </li>
-          <li>
-            The player makes a check against the difficulty, based on the most relevant talent.
-          </li>
-        </ol>
+                    <ol>
+                        <li>
+                            The game master chooses a difficulty (see table below).
+                        </li>
+                        <li>
+                            The player makes a check against the difficulty, based on the most relevant talent.
+                        </li>
+                    </ol>
 
-        <table>
-          <tr>
-            <td>Difficulty</td>
-            <td>Value</td>
-          </tr>
-          <tr>
-            <td>Very easy</td>
-            <td>9</td>
-          </tr>
-          <tr>
-            <td>Easy</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>Default/normal</td>
-            <td>11</td>
-          </tr>
-          <tr>
-            <td>Hard</td>
-            <td>12</td>
-          </tr>
-          <tr>
-            <td>Very hard</td>
-            <td>13</td>
-          </tr>
-        </table>
-        <p>
+                    <table>
+                        <tr>
+                            <td>Difficulty</td>
+                            <td>Value</td>
+                        </tr>
+                        <tr>
+                            <td>Very easy</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>Easy</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Default/normal</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>Hard</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>Very hard</td>
+                            <td>13</td>
+                        </tr>
+                    </table>
+                    <p>
 
-        </p>
+                    </p>
 
-        <p>
-          To make a check, the player rolls 1d20 and add their talent modifier. If the result is at least as high as the
-          difficulty, the action was a success.
-        </p>
+                    <p>
+                        To make a check, the player rolls 1d20 and add their talent modifier. If the result is at least as high as the
+                        difficulty, the action was a success.
+                    </p>
 
-        <p>
-            As a rule of thumb, all dice rolls are handled by players. The only job of the game master is to determine a difficulty for the players to beat. This include combat where agressors are also simply represented by a difficulty.
-        </p>
-      </details>
-      <details open>
-        <summary class="h2">
-          Criticals
-        </summary>
-        <p>
-            <i>Critical failures</i>, - and <i>successes</i> represent actions with exceptional outcomes. <strong>Critical failures are failures with additional negative consequences</strong> and <strong>critical successes are successes with additional positive effects</strong>. 
-            The actual outcomes are mostly up to the game master, but expansions can supply specifics to particular actions. Combat and powers are some categories that are usually supplied with specifics on criticals.
-        </p>
+                    <p>
+                        As a rule of thumb, all dice rolls are handled by players. The only job of the game master is to determine a difficulty for the players to beat. This include combat where agressors are also simply represented by a difficulty.
+                    </p>
+                </details>
+                <details open>
+                    <summary class="h2">
+                        Criticals
+                    </summary>
+                    <p>
+                        <i>Critical failures</i>, - and <i>successes</i> represent actions with exceptional outcomes. <strong>Critical failures are failures with additional negative consequences</strong> and <strong>critical successes are successes with additional positive effects</strong>. 
+                        The actual outcomes are mostly up to the game master, but expansions can supply specifics to particular actions. Combat and powers are some categories that are usually supplied with specifics on criticals.
+                    </p>
 
 
-        <h3>How to determine</h3>
-        <p>
-            To determine if a critical event has happened, refer to the below list, ordered from highest, - to lowest priority:
-        </p>
-        <ol>
-            <li>
-                Rolling a 1 or a 20 <strong>before applying modifier</strong> is a critical failure, - or success, respectively.
-            </li>
-            <li>
-                Rolling less than 1 or more than 20 <strong>after applying modifier</strong> is a critical failure, - or success, respectively.
-            </li>
-        </ol>
-        <table>
-            <tr>
-                <td></td>
-                <td>-5</td>
-                <td>-4</td>
-                <td>-3</td>
-                <td>-2</td>
-                <td width="30">-1</td>
-                <td width="25">0</td>
-                <td width="30">+1</td>
-                <td>+2</td>
-                <td>+3</td>
-                <td>+4</td>
-                <td>+5</td>
-            </tr>
-            <tr>
-                <td><strong>1</strong></td>
-                <td colspan="11">CF (Critical Failure)</td>
-            </tr>
-            <tr>
-                <td><strong>2</strong></td>
-                <td>CF</td>
-                <td>CF</td>
-                <td>CF</td>
-                <td>CF</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><strong>3</strong></td>
-                <td>CF</td>
-                <td>CF</td>
-                <td>CF</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><strong>4</strong></td>
-                <td>CF</td>
-                <td>CF</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><strong>5</strong></td>
-                <td>CF</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><strong>6-15</strong></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><strong>16</strong></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>CS</td>
-            </tr>
-            <tr>
-                <td><strong>17</strong></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>CS</td>
-                <td>CS</td>
-            </tr>
-            <tr>
-                <td><strong>18</strong></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>CS</td>
-                <td>CS</td>
-                <td>CS</td>
-            </tr>
-            <tr>
-                <td><strong>19</strong></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>CS</td>
-                <td>CS</td>
-                <td>CS</td>
-                <td>CS</td>
-            </tr>
-            <tr>
-                <td><strong>20</strong></td>
-                <td colspan="12">CS (Critical Success)</td>
-            </tr>
-        </table>
-      </details>
-    </div>
-    <div class="col w4">
-      <details open>
-        <summary class="h2">
-          Talents
-        </summary>
-        <p>
-          Talents describe the expertise of player characters. Low values being bad, high values being good.
-          When you encounter an action that cannot be represented by any existing talent, make up a new talent that fits
-          and assign it to the player character. - To do so, note your character class' affinity to the talent and make a talent assignment roll:
-        </p>
-        <table>
-            <tr>
-                <td>Roll</td>
-                <td>Handicapped</td>
-                <td>Default</td>
-                <td>Proficient</td>
-            </tr>
-            <tr>
-                <td class="nowrap">1-2</td>
-                <td>-5</td>
-                <td>-3</td>
-                <td>-1</td>
-            </tr>
-            <tr>
-                <td class="nowrap">3-5</td>
-                <td>-4</td>
-                <td>-2</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td class="nowrap">6-8</td>
-                <td>-3</td>
-                <td>-1</td>
-                <td>+1</td>
-            </tr>
-            <tr>
-                <td class="nowrap">9-12</td>
-                <td>-2</td>
-                <td>0</td>
-                <td>+2</td>
-            </tr>
-            <tr>
-                <td class="nowrap">13-15</td>
-                <td>-1</td>
-                <td>+1</td>
-                <td>+3</td>
-            </tr>
-            <tr>
-                <td class="nowrap">16-18</td>
-                <td>0</td>
-                <td>+2</td>
-                <td>+4</td>
-            </tr>
-            <tr>
-                <td class="nowrap">19-20</td>
-                <td>+1</td>
-                <td>+3</td>
-                <td>+5</td>
-            </tr>
-        </table>
-        <p>
-          Talents (and their level) persist even if a related item should leave a player character's inventory.
-        </p>
-        <p>
-          Talents vary greatly in theme and specificity. They represent the use of weapon types, the strength to hold a
-          door, health to withstand poison. Pretty much everything that a player character does or uses is expressed
-          using talents: <i>Resist poison, Swords, Two-Handed Swords, Climbing, Dodging, Barter, Threaten, Throw, Pistols, Unarmed Combat,
-          Fireball, X-Ray Vision, Hide, Sneak, Lockpicking, Lie, Invent, Read,</i> etc.
-        </p>
-      </details>
-      <details open>
-        <summary class="h2">
-          Luck
-        </summary>
-        <p>
-          Sometimes, someone has to draw the shortest straw. Who will the hulking beast attack first? Who will get hit
-          in the head with the falling potted plant? Who will step in the bear trap? Who will literally draw the
-          shortest straw? For this, use <i>Luck</i>.
-        </p>
-        <p>
-          All player characters start with d6 Luck. If anything unfortunate happens that is not explicitely tied to a
-          specific character, the player characters make a luck roll: 1d20 + luck (reroll on ties). The unfortunate
-          event
-          is inflicted upon the player character with the lowest result who in turn is awarded 1 Luck.
-        </p>
+                    <h3>How to determine</h3>
+                    <p>
+                        To determine if a critical event has happened, refer to the below list, ordered from highest, - to lowest priority:
+                    </p>
+                    <ol>
+                        <li>
+                            Rolling a 1 or a 20 <strong>before applying modifier</strong> is a critical failure, - or success, respectively.
+                        </li>
+                        <li>
+                            Rolling less than 1 or more than 20 <strong>after applying modifier</strong> is a critical failure, - or success, respectively.
+                        </li>
+                    </ol>
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td>-5</td>
+                            <td>-4</td>
+                            <td>-3</td>
+                            <td>-2</td>
+                            <td width="30">-1</td>
+                            <td width="25">0</td>
+                            <td width="30">+1</td>
+                            <td>+2</td>
+                            <td>+3</td>
+                            <td>+4</td>
+                            <td>+5</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1</strong></td>
+                            <td colspan="11">CF (Critical Failure)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2</strong></td>
+                            <td>CF</td>
+                            <td>CF</td>
+                            <td>CF</td>
+                            <td>CF</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>3</strong></td>
+                            <td>CF</td>
+                            <td>CF</td>
+                            <td>CF</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>4</strong></td>
+                            <td>CF</td>
+                            <td>CF</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>5</strong></td>
+                            <td>CF</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>6-15</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>16</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>CS</td>
+                        </tr>
+                        <tr>
+                            <td><strong>17</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>CS</td>
+                            <td>CS</td>
+                        </tr>
+                        <tr>
+                            <td><strong>18</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>CS</td>
+                            <td>CS</td>
+                            <td>CS</td>
+                        </tr>
+                        <tr>
+                            <td><strong>19</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>CS</td>
+                            <td>CS</td>
+                            <td>CS</td>
+                            <td>CS</td>
+                        </tr>
+                        <tr>
+                            <td><strong>20</strong></td>
+                            <td colspan="12">CS (Critical Success)</td>
+                        </tr>
+                    </table>
+                </details>
+            </div>
+            <div class="col w4">
+                <details open>
+                    <summary class="h2">
+                        Talents
+                    </summary>
+                    <p>
+                        Talents describe the expertise of player characters. Low values being bad, high values being good.
+                        When you encounter an action that cannot be represented by any existing talent, make up a new talent that fits
+                        and assign it to the player character. - To do so, note your character class' affinity to the talent and make a talent assignment roll:
+                    </p>
+                    <table>
+                        <tr>
+                            <td>Roll</td>
+                            <td>Handicapped</td>
+                            <td>Default</td>
+                            <td>Proficient</td>
+                        </tr>
+                        <tr>
+                            <td class="nowrap">1-2</td>
+                            <td>-5</td>
+                            <td>-3</td>
+                            <td>-1</td>
+                        </tr>
+                        <tr>
+                            <td class="nowrap">3-5</td>
+                            <td>-4</td>
+                            <td>-2</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td class="nowrap">6-8</td>
+                            <td>-3</td>
+                            <td>-1</td>
+                            <td>+1</td>
+                        </tr>
+                        <tr>
+                            <td class="nowrap">9-12</td>
+                            <td>-2</td>
+                            <td>0</td>
+                            <td>+2</td>
+                        </tr>
+                        <tr>
+                            <td class="nowrap">13-15</td>
+                            <td>-1</td>
+                            <td>+1</td>
+                            <td>+3</td>
+                        </tr>
+                        <tr>
+                            <td class="nowrap">16-18</td>
+                            <td>0</td>
+                            <td>+2</td>
+                            <td>+4</td>
+                        </tr>
+                        <tr>
+                            <td class="nowrap">19-20</td>
+                            <td>+1</td>
+                            <td>+3</td>
+                            <td>+5</td>
+                        </tr>
+                    </table>
+                    <p>
+                        Talents (and their level) persist even if a related item should leave a player character's inventory.
+                    </p>
+                    <p>
+                        Talents vary greatly in theme and specificity. They represent the use of weapon types, the strength to hold a
+                        door, health to withstand poison. Pretty much everything that a player character does or uses is expressed
+                        using talents: <i>Resist poison, Swords, Two-Handed Swords, Climbing, Dodging, Barter, Threaten, Throw, Pistols, Unarmed Combat,
+                            Fireball, X-Ray Vision, Hide, Sneak, Lockpicking, Lie, Invent, Read,</i> etc.
+                    </p>
+                </details>
+                <details open>
+                    <summary class="h2">
+                        Luck
+                    </summary>
+                    <p>
+                        Sometimes, someone has to draw the shortest straw. Who will the hulking beast attack first? Who will get hit
+                        in the head with the falling potted plant? Who will step in the bear trap? Who will literally draw the
+                        shortest straw? For this, use <i>Luck</i>.
+                    </p>
+                    <p>
+                        All player characters start with d6 Luck. If anything unfortunate happens that is not explicitely tied to a
+                        specific character, the player characters make a luck roll: 1d20 + luck (reroll on ties). The unfortunate
+                        event
+                        is inflicted upon the player character with the lowest result who in turn is awarded 1 Luck.
+                    </p>
 
-        <h3>Meta currency</h3>
-        <p>
-          Luck is also a meta currency that can be used by players to enhance their chance of success for checks: 1 luck expended will equal to +1 to their modifier. Expended luck must be resolved prior to rolling.
-        </p>
-        <p>
-            In addition to talent checks, Luck can also be used in this way to increase the result of talent assignment rolls.
-        </p>
+                    <h3>Meta currency</h3>
+                    <p>
+                        Luck is also a meta currency that can be used by players to enhance their chance of success for checks: 1 luck expended will equal to +1 to their modifier. Expended luck must be resolved prior to rolling.
+                    </p>
+                    <p>
+                        In addition to talent checks, Luck can also be used in this way to increase the result of talent assignment rolls.
+                    </p>
 
-        <h3>Critical success award</h3>
-        <p>
-          It also acts as a way for game masters to award players characters with 1 Luck if they roll a critical success
-          with no obvious extra benefits to apply.
-        </p>
-      </details>
-      <details open>
-        <summary class="h2">
-          Powers
-        </summary>
-        <p>
-          Powers represent all supernatural abilities in the game world. In a fantasy setting this would be magic, in a
-          cyberpunk setting it could mean implants allowing super speed, retractable wristblades etc.
-          Just like weapons and other tools, player characters make a talent assignment for each newly acquired power.
-        </p>
-        <p>
-          Powers are tied to discrete, destructible objects; magic spells is written on scrolls, hacking modules are
-          hardcoded into circuit boards, the void bridge is tied to a mystical totem etc.
-        </p>
-        <p>
-            Powers are usually provided with specific outcomes for criticals. Refer to expansion for these.
-        </p>
-      </details>
-      <details open>
-        <summary class="h2">
-            Weapons
-        </summary>
-        <p>
-            Weapons are described using a damage die.
-        </p>
-      </details>
-    </div>
-    <div class="col w4">
-      <details open>
-        <summary class="h2">
-          Advancement
-        </summary>
-        <p>
-          When the game master deems it so (usually after a gruelling encounter) the player characters can try to
-          upgrade their character: Increase talent level or increase maximum health.
-          level of the talent, they increase the talent level by 1.
-        </p>
-        <h3>Talent level</h3>
-        <p>
-            Player choose a talent they like to get better at and make another talent assignment roll for it (see Talents). If the result is higher than the current talent level, increase it by 1.
-        </p>
-        <h3>Maximum health</h3>
-        <p>
-            Player roll 1d20, if the result is higher than their current maximum health, they increase it by 1.
-        </p>
-      </details>
-      <details open>
-        <summary class="h2">
-          Combat
-        </summary>
-        <p>
-            Offense and defense is both handled with weapon talents (or for example <i>Unarmed Combat</i> if no weapon equipped).
-        </p>
-        <p class="example">
-            A trained soldier attacks a player character. Being trained, difficulty is 12. The player character has a sword equipped with talent Sword +3. The player rolls a 10. Thus, the sum is 13 and the player character succesfully deflects the attack.
-        </p>
-        <p>
-            Each round consists of 1 action. This can be attacking, moving, using a power etc.
-        </p>
-      </details>
-      <details open>
-        <summary class="h2">
-          Armor
-        </summary>
-        <p>
-            Armor are described using a class number between 0 and 3.
-            Whenever damage is sustained, subtract the class value before subtracting the result from health.
-        </p>
-        <p>
-            Armor can never reduce damage lower than 1. 
-        </p>
-        <p>
-          Some damage explicitly ignore armor and damages the player character health directly.
-        </p>
-        <table>
-            <tr>
-                <td>Class</td>
-                <td>Cost</td>
-                <td>Upgrade</td>
-            </tr>
-            <tr>
-                <td>0</td>
-                <td>-</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>50</td>
-                <td>75</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>100</td>
-                <td>150</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>200</td>
-                <td>-</td>
-            </tr>
-        </table>
-        <p>
-            Armor can be damaged. If that happens, the armor is reduced by 1.
-        </p>
-      </details>
-      <details open>
-        <summary class="h2">
-          Reactions
-        </summary>
-        <p>
-          When the game master is uncertain how a non-player character is going to react, they can make a reaction roll
-          using 1d20:
-        </p>
-        <table>
-          <tr>
-            <td>
-              Roll
-            </td>
-            <td>
-              Reaction
-            </td>
-          </tr>
-          <tr>
-            <td class="nowrap">1-3</td>
-            <td>Extreme animosity, will attack</td>
-          </tr>
-          <tr>
-            <td class="nowrap">4-6</td>
-            <td>Angered, very suspicious</td>
-          </tr>
-          <tr>
-            <td class="nowrap">7-10</td>
-            <td>Dismissive, prefer to be left alone</td>
-          </tr>
-          <tr>
-            <td class="nowrap">11-14</td>
-            <td>Interested, wants more information</td>
-          </tr>
-          <tr>
-            <td class="nowrap">15-17</td>
-            <td>Friendly, will help without much incentive</td>
-          </tr>
-          <tr>
-            <td class="nowrap">18-20</td>
-            <td>Elated, will do a lot and ask few questions</td>
-          </tr>
-        </table>
-        <p>
-            The game master can apply modifiers to the reaction roll if there are circumstances that could have an impact on it.
-        </p>
-      </details>
-      <details open>
-        <summary class="h2">
-          Inventory
-        </summary>
-        <p>
-          Player characters can carry <strong>10 items</strong>. Of these items, characters can carry <strong>1 <i>huge</i> item</strong>. Player characters can carry <strong>infinite <i>tiny</i> items</strong>.
-        </p>
-        <p>
-            <i>Huge</i> and <i>tiny</i> items must be explicitly described as such, except hard currency which count as <i>tiny</i> items.
-        </p>
-      </details>
-      <details open>
-        <summary class="h2">
-            Enemies
-        </summary>
-        <p>
-            Enemies are described using a die. This die represents their damage and health. When creating the enemy, roll the die and assign the result as its health. For armor, roll 2d4 and subtract the lowest value from the highest.
-        </p>
-      </details>
-    </div>
-  </div>
-</body>
+                    <h3>Critical success award</h3>
+                    <p>
+                        It also acts as a way for game masters to award players characters with 1 Luck if they roll a critical success
+                        with no obvious extra benefits to apply.
+                    </p>
+                </details>
+                <details open>
+                    <summary class="h2">
+                        Powers
+                    </summary>
+                    <p>
+                        Powers represent all supernatural abilities in the game world. In a fantasy setting this would be magic, in a
+                        cyberpunk setting it could mean implants allowing super speed, retractable wristblades etc.
+                        Just like weapons and other tools, player characters make a talent assignment for each newly acquired power.
+                    </p>
+                    <p>
+                        Powers are tied to discrete, destructible objects; magic spells is written on scrolls, hacking modules are
+                        hardcoded into circuit boards, the void bridge is tied to a mystical totem etc.
+                    </p>
+                    <p>
+                        Powers are usually provided with specific outcomes for criticals. Refer to expansion for these.
+                    </p>
+                </details>
+                <details open>
+                    <summary class="h2">
+                        Weapons
+                    </summary>
+                    <p>
+                        Weapons are described using a damage die.
+                    </p>
+                </details>
+            </div>
+            <div class="col w4">
+                <details open>
+                    <summary class="h2">
+                        Advancement
+                    </summary>
+                    <p>
+                        When the game master deems it so (usually after a gruelling encounter) the player characters can try to
+                        upgrade their character: Increase talent level or increase maximum health.
+                        level of the talent, they increase the talent level by 1.
+                    </p>
+                    <h3>Talent level</h3>
+                    <p>
+                        Player choose a talent they like to get better at and make another talent assignment roll for it (see Talents). If the result is higher than the current talent level, increase it by 1.
+                    </p>
+                    <h3>Maximum health</h3>
+                    <p>
+                        Player roll 1d20, if the result is higher than their current maximum health, they increase it by 1.
+                    </p>
+                </details>
+                <details open>
+                    <summary class="h2">
+                        Combat
+                    </summary>
+                    <p>
+                        Offense and defense is both handled with weapon talents (or for example <i>Unarmed Combat</i> if no weapon equipped).
+                    </p>
+                    <p class="example">
+                        A trained soldier attacks a player character. Being trained, difficulty is 12. The player character has a sword equipped with talent Sword +3. The player rolls a 10. Thus, the sum is 13 and the player character succesfully deflects the attack.
+                    </p>
+                    <p>
+                        Each round consists of 1 action. This can be attacking, moving, using a power etc.
+                    </p>
+                </details>
+                <details open>
+                    <summary class="h2">
+                        Armor
+                    </summary>
+                    <p>
+                        Armor are described using a class number between 0 and 3.
+                        Whenever damage is sustained, subtract the class value before subtracting the result from health.
+                    </p>
+                    <p>
+                        Armor can never reduce damage lower than 1. 
+                    </p>
+                    <p>
+                        Some damage explicitly ignore armor and damages the player character health directly.
+                    </p>
+                    <table>
+                        <tr>
+                            <td>Class</td>
+                            <td>Cost</td>
+                            <td>Upgrade</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>-</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>50</td>
+                            <td>75</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>100</td>
+                            <td>150</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>200</td>
+                            <td>-</td>
+                        </tr>
+                    </table>
+                    <p>
+                        Armor can be damaged. If that happens, the armor is reduced by 1.
+                    </p>
+                </details>
+                <details open>
+                    <summary class="h2">
+                        Reactions
+                    </summary>
+                    <p>
+                        When the game master is uncertain how a non-player character is going to react, they can make a reaction roll
+                        using 1d20:
+                    </p>
+                    <table>
+                        <tr>
+                            <td>
+                                Roll
+                            </td>
+                            <td>
+                                Reaction
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="nowrap">1-3</td>
+                            <td>Extreme animosity, will attack</td>
+                        </tr>
+                        <tr>
+                            <td class="nowrap">4-6</td>
+                            <td>Angered, very suspicious</td>
+                        </tr>
+                        <tr>
+                            <td class="nowrap">7-10</td>
+                            <td>Dismissive, prefer to be left alone</td>
+                        </tr>
+                        <tr>
+                            <td class="nowrap">11-14</td>
+                            <td>Interested, wants more information</td>
+                        </tr>
+                        <tr>
+                            <td class="nowrap">15-17</td>
+                            <td>Friendly, will help without much incentive</td>
+                        </tr>
+                        <tr>
+                            <td class="nowrap">18-20</td>
+                            <td>Elated, will do a lot and ask few questions</td>
+                        </tr>
+                    </table>
+                    <p>
+                        The game master can apply modifiers to the reaction roll if there are circumstances that could have an impact on it.
+                    </p>
+                </details>
+                <details open>
+                    <summary class="h2">
+                        Inventory
+                    </summary>
+                    <p>
+                        Player characters can carry <strong>10 items</strong>. Of these items, characters can carry <strong>1 <i>huge</i> item</strong>. Player characters can carry <strong>infinite <i>tiny</i> items</strong>.
+                    </p>
+                    <p>
+                        <i>Huge</i> and <i>tiny</i> items must be explicitly described as such, except hard currency which count as <i>tiny</i> items.
+                    </p>
+                </details>
+                <details open>
+                    <summary class="h2">
+                        Enemies
+                    </summary>
+                    <p>
+                        Enemies are described using a die. This die represents their damage and health. When creating the enemy, roll the die and assign the result as its health. For armor, roll 2d4 and subtract the lowest value from the highest.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </body>
 
 </html>
