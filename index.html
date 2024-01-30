@@ -7,7 +7,7 @@
   <title>Napper</title>
   <link rel="preconnect" href="https://rsms.me/">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link href="/sdcss.css" rel="stylesheet" type="text/css" media="all">
+  <link href="https://superdupercybertechno.github.io/sdcss/sdcss.css" rel="stylesheet" type="text/css" media="all">
   <link href="/style.css" rel="stylesheet" type="text/css" media="all">
 </head>
 
@@ -16,6 +16,7 @@
     <div class="col">
       <h1>
         Napper
+        <sup>0.9</sup>
       </h1>
       <p>
         A generic role playing game engine
@@ -34,7 +35,26 @@
 
         <h3>Requirements</h3>
         <p>
-            A complete set of 7 standard polyhedral dice: 1d4, 1d6, 1d8, 1d10, 1d12, 1d20 and 1d100. Pen and paper. That's it.
+            A set of 7 standard polyhedral dice: 1d4, 1d6, 1d8, 1d10, 1d12 and 1d20 (d100 is not needed). Pen and paper. That's it.
+        </p>
+
+        <h3>Nomenclature</h3>
+        <p>
+            When playing Napper, you will frequently be asked to roll dice. There are 2 ways to 
+        </p>
+        <p>
+            <strong>d-notation</strong> (1d6, 2d4, 1d8 etc.): Used for sums (shorthand for "1 die, 6 sides", "2 dice, 4 sides", "1 die, 8 sides" etc.)
+            <br>
+            Roll the amount of dice that correspond to the number <u>before</u> <i>d</i>. The size (number of sides) of the dice is determined by the number <u>after</u> <i>d</i>.
+            <br>
+            Example: An unfortunate explosion does 2d4 damage. Roll 2 four-sided dice and add all the results to get the damage the explosion did.
+        </p>
+        <p>
+            <strong>i-notation</strong> (1i4, 3i8, 4i20 etc.): Used for probabilites (shorthand for "1 in 4", "3 in 8", "4 in 20" etc.)
+            <br>
+            Roll one die, its size (number of sides) is determined by the number <u>after</u> <i>i</i>. If the result is not higher than the number before <i>i</i>, the result is true. Otherwise it is false.
+            <br>
+            Example: A barrel of volatile explosives has a probability of 3i8 to explode. Roll one eight-sided die (1d8), if the result is 1, 2 or 3 the result is true (the barrel explodes). Otherwise the outcome is false (the barrel does not explode).
         </p>
       </details>
       <details open>
@@ -60,7 +80,7 @@
             <td>Value</td>
           </tr>
           <tr>
-            <td>Easier</td>
+            <td>Very easy</td>
             <td>9</td>
           </tr>
           <tr>
@@ -76,31 +96,43 @@
             <td>12</td>
           </tr>
           <tr>
-            <td>Harder</td>
+            <td>Very hard</td>
             <td>13</td>
           </tr>
         </table>
+        <p>
+
+        </p>
 
         <p>
           To make a check, the player rolls 1d20 and add their talent modifier. If the result is at least as high as the
           difficulty, the action was a success.
+        </p>
+
+        <p>
+            As a rule of thumb, all dice rolls are handled by players. The only job of the game master is to determine a difficulty for the players to beat. This include combat where agressors are also simply represented by a difficulty.
         </p>
       </details>
       <details open>
         <summary class="h2">
           Criticals
         </summary>
-        To determine if a critical event has happened, refer to the below list, ordered from highest, - to lowest priority:
+        <p>
+            <i>Critical failures</i>, - and <i>successes</i> represent actions with exceptional outcomes. <strong>Critical failures are failures with additional negative consequences</strong> and <strong>critical successes are successes with additional positive effects</strong>. 
+            The actual outcomes are mostly up to the game master, but expansions can supply specifics to particular actions. Combat and powers are some categories that are usually supplied with specifics on criticals.
+        </p>
+
+
+        <h3>How to determine</h3>
+        <p>
+            To determine if a critical event has happened, refer to the below list, ordered from highest, - to lowest priority:
+        </p>
         <ol>
             <li>
-                Any check that results in a value of <strong>1 <u>before</u> applying modifier</strong> is a <strong>critical failure</strong>.
-                <br>
-                Any check that results in a value of <strong>20 <u>before</u> applying modifier</strong> is a <strong>critical success</strong>.
+                Rolling a 1 or a 20 <strong>before applying modifier</strong> is a critical failure, - or success, respectively.
             </li>
             <li>
-                Any check that results in a value of <strong>less than 1 <u>after</u> applying modifier</strong> is a <strong>critical failure</strong>.
-                <br>
-                Any check that results in a value of <strong>more than 20 <u>after</u> applying modifier</strong> is a <strong>critical success</strong>.
+                Rolling less than 1 or more than 20 <strong>after applying modifier</strong> is a critical failure, - or success, respectively.
             </li>
         </ol>
         <table>
@@ -110,9 +142,9 @@
                 <td>-4</td>
                 <td>-3</td>
                 <td>-2</td>
-                <td width="35">-1</td>
-                <td width="35">0</td>
-                <td width="35">+1</td>
+                <td width="30">-1</td>
+                <td width="25">0</td>
+                <td width="30">+1</td>
                 <td>+2</td>
                 <td>+3</td>
                 <td>+4</td>
@@ -167,6 +199,20 @@
             <tr>
                 <td><strong>5</strong></td>
                 <td>CF</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><strong>6-15</strong></td>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -239,20 +285,6 @@
                 <td colspan="12">CS (Critical Success)</td>
             </tr>
         </table>
-      </details>
-      <details open>
-        <summary class="h2">
-          Powers
-        </summary>
-        <p>
-          Powers represent all supernatural abilities in the game world. In a fantasy setting this would be magic, in a
-          cyberpunk setting it could mean implants allowing super speed, retractable wristblades etc.
-          Just like weapons and other tools, player characters make a talent assignment for each newly acquired power.
-        </p>
-        <p>
-          Powers are tied to discrete, destructible objects; magic spells is written on scrolls, hacking modules are
-          hardcoded into circuit boards, the void bridge is tied to a mystical totem etc.
-        </p>
       </details>
     </div>
     <div class="col w4">
@@ -355,6 +387,31 @@
           with no obvious extra benefits to apply.
         </p>
       </details>
+      <details open>
+        <summary class="h2">
+          Powers
+        </summary>
+        <p>
+          Powers represent all supernatural abilities in the game world. In a fantasy setting this would be magic, in a
+          cyberpunk setting it could mean implants allowing super speed, retractable wristblades etc.
+          Just like weapons and other tools, player characters make a talent assignment for each newly acquired power.
+        </p>
+        <p>
+          Powers are tied to discrete, destructible objects; magic spells is written on scrolls, hacking modules are
+          hardcoded into circuit boards, the void bridge is tied to a mystical totem etc.
+        </p>
+        <p>
+            Powers are usually provided with specific outcomes for criticals. Refer to expansion for these.
+        </p>
+      </details>
+      <details open>
+        <summary class="h2">
+            Weapons
+        </summary>
+        <p>
+            Weapons are described using a damage die.
+        </p>
+      </details>
     </div>
     <div class="col w4">
       <details open>
@@ -380,8 +437,13 @@
           Combat
         </summary>
         <p>
-          Combat is player-facing, meaning that players will make all dice rolls. Prior to combat, players declares what
-          they equip
+            Offense and defense is both handled with weapon talents (or for example <i>Unarmed Combat</i> if no weapon equipped).
+        </p>
+        <p class="example">
+            A trained soldier attacks a player character. Being trained, difficulty is 12. The player character has a sword equipped with talent Sword +3. The player rolls a 10. Thus, the sum is 13 and the player character succesfully deflects the attack.
+        </p>
+        <p>
+            Each round consists of 1 action. This can be attacking, moving, using a power etc.
         </p>
       </details>
       <details open>
@@ -389,14 +451,44 @@
           Armor
         </summary>
         <p>
-            Armor are described using a single die that represent its ability to mitigate damage, just like weapons have a die that represent its damage output.
-            Whenever damage is sustained, roll the armor die and subtract the result from the incoming damage. Subtract the result from player character health.
+            Armor are described using a class number between 0 and 3.
+            Whenever damage is sustained, subtract the class value before subtracting the result from health.
         </p>
         <p>
-            Any incoming damage can never go lower than one regardless of the armor worn.
+            Armor can never reduce damage lower than 1. 
         </p>
         <p>
-          Some damage explicitely ignore armor and damages the player character health directly.
+          Some damage explicitly ignore armor and damages the player character health directly.
+        </p>
+        <table>
+            <tr>
+                <td>Class</td>
+                <td>Cost</td>
+                <td>Upgrade</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>-</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>50</td>
+                <td>75</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>100</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>200</td>
+                <td>-</td>
+            </tr>
+        </table>
+        <p>
+            Armor can be damaged. If that happens, the armor is reduced by 1.
         </p>
       </details>
       <details open>
@@ -451,6 +543,17 @@
         </summary>
         <p>
           Player characters can carry <strong>10 items</strong>. Of these items, characters can carry <strong>1 <i>huge</i> item</strong>. Player characters can carry <strong>infinite <i>tiny</i> items</strong>.
+        </p>
+        <p>
+            <i>Huge</i> and <i>tiny</i> items must be explicitly described as such, except hard currency which count as <i>tiny</i> items.
+        </p>
+      </details>
+      <details open>
+        <summary class="h2">
+            Enemies
+        </summary>
+        <p>
+            Enemies are described using a die. This die represents their damage and health. When creating the enemy, roll the die and assign the result as its health. For armor, roll 2d4 and subtract the lowest value from the highest.
         </p>
       </details>
     </div>

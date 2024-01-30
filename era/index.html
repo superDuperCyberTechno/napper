@@ -21,66 +21,266 @@
             </div>
         </div>
         <div class="row">
-            <div class="col w4">
+            <div class="col">
                 <details open>
                     <summary class="h2">
-                        Meelee Weapons
+                        Melee Weapons
                     </summary>
                     <table>
                         <tr>
                             <td>Roll</td>
                             <td>Weapon</td>
                             <td>Notes</td>
+                            <td>Damage (d6)</td>
                         </tr>
                         <tr>
-                            <td>1-2</td>
-                            <td>Sword</td>
-                            <td></td>
+                            <td>1</td>
+                            <td>Broadsword</td>
+                            <td>Piercing/slashing damage.</td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>1-3</td>
+                                        <td>d6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4-5</td>
+                                        <td>d8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>d10</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Longsword</td>
+                            <td>Piercing/slashing damage. Two-handed.</td>
+                            <td>
+                                <table class="subtable">
+                                    <tr>
+                                        <td>1-3</td>
+                                        <td>d8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4-5</td>
+                                        <td>d10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>d12</td>
+                                    </tr>
+                                </table>
+                            </td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>Mace</td>
-                            <td></td>
+                            <td>Warhammer</td>
+                            <td>Crushing/piercing damage.</td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>1-3</td>
+                                        <td>d6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4-5</td>
+                                        <td>d8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>d10</td>
+                                    </tr>
+                                </table>
+                            </td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>Spear</td>
-                            <td>Long range</td>
+                            <td>Polehammer</td>
+                            <td>Crushing/piercing damage. Two-handed.</td>
+                            <td>
+                                <table class="subtable">
+                                    <tr>
+                                        <td>1-3</td>
+                                        <td>d8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4-5</td>
+                                        <td>d10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>d12</td>
+                                    </tr>
+                                </table>
+                            </td>
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td>Flail</td>
-                            <td>Ignores shields</td>
+                            <td>Battleaxe</td>
+                            <td>Slashing/crushing damage.</td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>1-3</td>
+                                        <td>d6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4-5</td>
+                                        <td>d8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>d10</td>
+                                    </tr>
+                                </table>
+                            </td>
                         </tr>
                         <tr>
                             <td>6</td>
-                            <td>Hammer</td>
-                            <td>Good at breaking stuff</td>
-                        </tr>
-                        <tr>
-                            <td colspan="3">
-                                Roll another d6: 2-handed on 1 or 2. 2-handed variants deal double damage but require 2 hands to operate.
+                            <td>Poleaxe</td>
+                            <td>Slashing/crushing damage. Two-handed.</td>
+                            <td>
+                                <table class="subtable">
+                                    <tr>
+                                        <td>1-3</td>
+                                        <td>d8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4-5</td>
+                                        <td>d10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>d12</td>
+                                    </tr>
+                                </table>
                             </td>
                         </tr>
                     </table>
-                    <details open>
-                        <summary class="h3">Sword</summary>
-                        <p>
-                            The venerable sword is a sharpened blade with
-                        </p>
-                        <table>
-                            <tr>
-                                <td>Roll</td>
-                                <td>Critical success</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                            </tr>
-                        </table>
-                    </details>
+                </details>
+                <details open>
+                    <summary class="h2">
+                        Ranged weapons
+                    </summary>
+                    <table>
+                        <tr>
+                            <td>Roll</td>
+                            <td>Weapon</td>
+                            <td>Notes</td>
+                            <td>Damage (d6)</td>
+                        </tr>
+                        <tr>
+                            <td>1-2</td>
+                            <td>Bow</td>
+                            <td>Piercing damage. Two-handed.</td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>1-3</td>
+                                        <td>d4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4-5</td>
+                                        <td>d6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>d8</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3-4</td>
+                            <td>Crossbow</td>
+                            <td>Piercing damage. Two-handed. Takes 1 turn to reload.</td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>1-3</td>
+                                        <td>d6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4-5</td>
+                                        <td>d8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>d10</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Throwing knives</td>
+                            <td>Piercing damage.</td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>1-3</td>
+                                        <td>d4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4-5</td>
+                                        <td>d6</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Sling</td>
+                            <td>Two-handed. Unlimited ammunition.</td>
+                            <td>d4</td>
+                        </tr>
+                    </table>
+                </details>
+                <details open>
+                    <summary class="h2">
+                        Critical damage
+                    </summary>
+                    By default (if result below is not applicable), critical damage does double damage.
+                    <table>
+                        <tr>
+                            <td>Type</td>
+                            <td>Roll</td>
+                            <td>Effect</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Crushing</td>
+                            <td>1-3</td>
+                            <td>Reduce armor by 1.</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Knocked out for d4 rounds.</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Slashing</td>
+                            <td>1-3</td>
+                            <td>Bleed for 1 damage each round. Stacks. Stopped with first aid.</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Random limb is severed.</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Piercing</td>
+                            <td>1-3</td>
+                            <td>Bypass armor.</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td></td>
+                        </tr>
+                    </table>
                 </details>
             </div>
-            <div class="col w4">
+            <div class="col">
                 <details open>
                     <summary class="h2">
                         Powers
@@ -130,8 +330,55 @@
                         </tr>
                     </table>
                 </details>
-            </div>
-            <div class="col">
+                <details open>
+                    <summary class="h2">
+                        Enemies
+                    </summary>
+                    <table>
+                        <tr>
+                            <td>Roll</td>
+                            <td>Power</td>
+                            <td>Critical success</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Fireball</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Lightning</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Teleport</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Telekinesis</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Shield</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Blind</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                            </td>
+                        </tr>
+                    </table>
+                </details>
             </div>
         </div>
     </body>

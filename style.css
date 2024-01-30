@@ -21,14 +21,12 @@ details>*:not(:last-child):not(summary,h1,h2,h3,.h1,.h2,.h3) {
 
 table td {
     text-align: center;
-    border-right:1px solid black;
+    border-right:1px solid #010101;
 }
 
 table td:last-child {
     border-right:none;
 }
-
-
 
 td.nowrap{
     white-space: nowrap;       
@@ -39,10 +37,6 @@ summary {
   font-weight: 500;
   margin: 0;
   cursor: pointer;
-}
-
-table tr:first-child{
-    font-weight: 700;
 }
 
 td {
