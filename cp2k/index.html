@@ -28,20 +28,84 @@
   <col-row>
     <col-x>
       <details open>
-        <summary>Powers</summary>
+        <summary>Apps</summary>
+        <p>
+          All text within parenthesis is unknown to the players
+        </p>
+        <br>
         <table>
           <tr>
             <td>
-              Product
+              Name
             </td>
             <td>
-              Description
+              Success
+            </td>
+            <td>
+              Critical success
+            </td>
+            <td>
+              Critical failure
             </td>
             <td>
               In stock
             </td>
             <td>
               Price
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Toggle
+            </td>
+            <td>
+              Toggle a single mechanism, once.
+            </td>
+            <td>
+              Mechanism cannot be toggled again (optional).
+            </td>
+            <td>
+              -
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Invisibility
+            </td>
+            <td>
+              Hack a single target's lenses, making any human sized object invisible (for 1d4 rounds).
+            </td>
+            <td>
+              All lenses currently pointed at target is hacked.
+            </td>
+            <td>
+              Executor hacks own lenses. A random person is invisible to the executor.
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Takeover
+            </td>
+            <td>
+              Gain control of a single autonomous drone or turret for d6 rounds.
+            </td>
+            <td>
+              All lenses currently pointed at target is hacked.
+            </td>
+            <td>
+              Executor hacks own lenses. A random person is invisible to the executor.
+            </td>
+            <td>
+            </td>
+            <td>
             </td>
           </tr>
         </table>
@@ -54,113 +118,136 @@
       <details open>
         <summary>Items</summary>
         <table>
-          <tr>
-            <td>
-              Product
-            </td>
-            <td>
-              Description
-            </td>
-            <td>
-              In stock
-            </td>
-            <td>
-              Price
-            </td>
-          </tr>
+          <table>
+            <tr>
+              <td>
+                Name
+              </td>
+              <td>
+                Success
+              </td>
+              <td>
+                Failure
+              </td>
+              <td>
+                Critical success
+              </td>
+              <td>
+                Critical failure
+              </td>
+              <td>
+                In stock
+              </td>
+              <td>
+                Price
+              </td>
+            </tr>
 
-          <tr>
-            <td>
-              Stimpack
-            </td>
-            <td>
-              S: Instantly heals d8 health. F: Instantly heals d4 health. CS: Instantly heals to full health. CF: Reset
-              health to 1.
-            </td>
-            <td>
-              1d10
-            </td>
-            <td>
-              3 cr.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Protostim
-            </td>
-            <td>
-              S: Instantly heals d12. F: Instantly heals d6 health. CS: Instantly heals to full health and an additional
-              d6. CF: Reset health to 1 and fall unconscious for d4 rounds.
-            </td>
-            <td>
-              1d4
-            </td>
-            <td>
-              5 cr.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Enriched fibre (A1)
-            </td>
-            <td>
-              Reduce incoming damage by 1.
-            </td>
-            <td>
-              1d4-1
-            </td>
-            <td>
-              10 cr.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Ballistic padding (A2)
-            </td>
-            <td>
-              Reduce incoming damage by 2.
-            </td>
-            <td>
-              1d4-2
-            </td>
-            <td>
-              20 cr.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Combat plating (A3)
-            </td>
-            <td>
-              Reduce incoming damage by 3.
-            </td>
-            <td>
-              1d4-3
-            </td>
-            <td>
-              40 cr.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Assault rifle
-            </td>
-            <td>
-              Damage: d4, d6 or d8.
-            </td>
-            <td>
-              1d4-3
-            </td>
-            <td>
-              d10
-            </td>
-          </tr>
-        </table>
+            <tr>
+              <td>
+                Stimpack
+              </td>
+              <td>
+                Instantly heals 1d6 health.
+              </td>
+              <td>
+                Instantly heal 1d4 health.
+              </td>
+              <td>
+                Instantly heal 1d8 damage.
+              </td>
+              <td>
+                -
+              </td>
+              <td>
+                1d10
+              </td>
+              <td>
+                3 cr.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Protostim
+              </td>
+              <td>
+                Instantly heal 1d12 health.
+                S: Instantly heals d12. F: Instantly heals d6 health. CS: Instantly heals to full health and an
+                additional
+                d6. CF: Reset health to 1 and fall unconscious for d4 rounds.
+              </td>
+              <td>
+                Instantly deal 1d4 damage health.
+              </td>
+              <td>
+
+              </td>
+              <td>
+                5 cr.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Enriched fibre (A1)
+              </td>
+              <td>
+                Reduce incoming damage by 1.
+              </td>
+              <td>
+                1d4-1
+              </td>
+              <td>
+                10 cr.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Ballistic padding (A2)
+              </td>
+              <td>
+                Reduce incoming damage by 2.
+              </td>
+              <td>
+                1d4-2
+              </td>
+              <td>
+                20 cr.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Combat plating (A3)
+              </td>
+              <td>
+                Reduce incoming damage by 3.
+              </td>
+              <td>
+                1d4-3
+              </td>
+              <td>
+                40 cr.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Assault rifle
+              </td>
+              <td>
+                Damage: d4, d6 or d8.
+              </td>
+              <td>
+                1d4-3
+              </td>
+              <td>
+                d10
+              </td>
+            </tr>
+          </table>
       </details>
     </col-x>
   </col-row>
 
-  <col-row>
+  <col-row style="display:none;">
     <col-x>
       <details open>
         <summary>Vagrant Hellion</summary>
@@ -264,8 +351,8 @@
     </col-x>
     <col-x>
       <details open>
-        <summary>Smart-ass Hustler</summary>
-        <img src="operator.jpg">
+        <summary>Keyboard Warrior</summary>
+        <img src="keyboard_warrior_.jpg">
 
         <p>
           <i>
@@ -279,18 +366,6 @@
 
         <p>
           <strong>[Sleight of Hand]</strong> +1 to all talent assignments concerning dexterity (fine motor skills).
-        </p>
-
-        <p>
-          <strong>[Fast Talker]</strong> +1 to all talent assignments concerning conversation.
-        </p>
-
-        <p>
-          <strong>[Not a Fighter]</strong> -1 to all talent assignments concerning combat.
-        </p>
-
-        <p>
-          <strong>[Sales Pitch]</strong> Make someone believe even the most outrageous lies.
         </p>
 
       </details>
